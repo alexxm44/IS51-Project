@@ -12,7 +12,7 @@ def long_phone_format(num):
 
 def main():
     print("This program formats 10 and 11 digit strings to a phone number with a country code if applicable\n\n\n")
-    choice = input("Do you wnant to read from a file or input the numbers manually (read/ input\n")
+    choice = input("Do you want to read from a file or input the numbers manually (type read/input)\n")
 
     if choice == "read" or choice == "Read":
         with open('input_numbers.txt') as infile:
@@ -31,6 +31,7 @@ def main():
                 else:
                     outfile.write(f"The number supplied in line {i} of the input file is not in the correct format and "
                                   f"has not been formatted. Replace this line with a manually formatted entry\n")
+            print("All numbers have been formatted... Printing to file")
 
     if choice == "input" or choice == "Input":
         with open('output_numbers.txt', 'w') as outfile:
